@@ -5,8 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "babel src/ -d lib/",
-    "start": "node lib\\main.js",
-    "prepublish": "yarn build"
+    "start": "node lib\\main.js"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",

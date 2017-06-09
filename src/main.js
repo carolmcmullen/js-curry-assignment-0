@@ -19,7 +19,6 @@ const listings = [
 
 const customers = [
   customer('adam', {
-    detergent: 1,
     'carlo rozzi': 6
   }),
   customer('david', {

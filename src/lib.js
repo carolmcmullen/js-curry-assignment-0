@@ -26,7 +26,7 @@ const cart =
 /**
  * should return an array with the `itemName` repeated `count` number of times
  */
-const itemRepeater =
+const itemRepeater = 
   itemName =>
     count => {
       let result = []
@@ -36,7 +36,6 @@ const itemRepeater =
         index++
       }
       return result 
-      //return hideFunctionalCode(itemName, count);
     }
 
 /**
@@ -45,19 +44,15 @@ const itemRepeater =
  */
 const constructCarts =
   listings =>
-    customers => {
-      let t = customers.map(processCustomer)
-      return t
-    }
+    customers => 
+      customers.map(processCustomer)
+    
 
 const processCustomer = currentValue => {
   let items = []
-  let x = entries(currentValue.shoppingList)
-  x.forEach(function(shoppingListItem) {
-    let a = itemRepeater(shoppingListItem[0],
-      shoppingListItem[1])
-    items.push(a)
-  }, this)
+  entries(currentValue.shoppingList).forEach(function(shoppingListItem) {
+    items = items.concat(itemRepeater(shoppingListItem[0])(shoppingListItem[1]))
+  })
   
   return cart(currentValue.name, items)
 }
